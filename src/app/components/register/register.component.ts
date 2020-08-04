@@ -22,6 +22,8 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ErrorMessage: String ="";
+
   onAddUser(form){
     this.authservice.registerUser(form.email, form.password)
     .then(res => {
@@ -29,6 +31,17 @@ export class RegisterComponent implements OnInit {
       this.router.navigate(['/']);
      }, err => {
        console.log(err);
+       switch(err.code){
+        case 'auth/invalid-email':
+         this.ErrorMessage = "Este email es inválido."
+         break;
+         case 'auth/weak-password':
+           this.ErrorMessage = "La contraseña debe ser minimo de 6 caracteres."
+        break;
+        case 'auth/email-already-in-use':
+          this.ErrorMessage = "Este correo ya está en uso."
+          break;
+       }
      }  
     )
   }

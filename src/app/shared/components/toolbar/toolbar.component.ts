@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 
+
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
@@ -14,6 +15,7 @@ export class ToolbarComponent implements OnInit {
 
   onLogout(): void{
     this.authSvc.logout();
+    
   }
 
 }

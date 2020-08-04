@@ -29,6 +29,7 @@ export class LoginComponent {
       case 'auth/invalid-email':
         this.ErrorMsg = "El email no existe.";
         break;
+      
       default:
         this.ErrorMsg = "";
         this.route.navigate(['/']); 

@@ -59,3 +59,14 @@
     }
 }
 }
+
+.container-spinner{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+        
+}
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {   
+    stroke:#0f7403;
+}
+

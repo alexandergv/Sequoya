@@ -5,8 +5,9 @@
         
         </mat-card>
     </div>
-<div class="containergrid">
-<div class="container" *ngFor="let post of post" >
+<div class="containergrid" *ngIf ="posts$ | async ; else loading">
+
+    <div class="container" *ngFor="let post of posts$ | async" >
     <a class="link"[routerLink]="['/post',post.id]">
     <mat-card class="post-card" >
         
@@ -18,6 +19,15 @@
             <p>
                 {{post.contentPost}}
             </p>
+           <mat-divider ></mat-divider>
+           <mat-card-actions>
+           <mat-chip-list>
+           <mat-chip *ngFor="let tag of post.tagsPost" [ngClass]= "tag  ">
+                {{ tag }}
+           </mat-chip>
+           </mat-chip-list>
+           </mat-card-actions>
+       
         </mat-card-content>
        
         </mat-card>
@@ -25,3 +35,13 @@
     </div>
 </div>
 
+
+<ng-template #loading>
+    <div class="container-spinner">
+   <mat-spinner class="espiner"></mat-spinner>
+       
+        </div>
+        
+   
+</ng-template>
+    
