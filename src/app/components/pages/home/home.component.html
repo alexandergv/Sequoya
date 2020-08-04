@@ -1,0 +1,27 @@
+<div class="logocontainer" >
+    <mat-card class="logo-card">
+        <img matCardImage [src]="logo.logo">
+  
+        
+        </mat-card>
+    </div>
+<div class="containergrid">
+<div class="container" *ngFor="let post of post" >
+    <a class="link"[routerLink]="['/post',post.id]">
+    <mat-card class="post-card" >
+        
+        <mat-card-header>
+           {{post.titlePost}}
+        </mat-card-header>
+        <img matCardImage [src]="post.imagePost">
+        <mat-card-content>
+            <p>
+                {{post.contentPost}}
+            </p>
+        </mat-card-content>
+       
+        </mat-card>
+    </a>
+    </div>
+</div>
+

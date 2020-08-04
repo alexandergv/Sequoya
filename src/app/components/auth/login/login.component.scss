@@ -1,0 +1,45 @@
+:host{
+    display:flex;
+    justify-content: center;
+    margin: 100px 0;
+    
+}
+
+.mat-form-field{
+   width: 100%;
+   min-width: 300px;
+   
+} 
+
+mat-card-title, mat-card-content{
+    color: black;
+    text-align: center;
+    justify-content: center;
+
+}
+
+button{
+    width: 100%;
+    background-color:green;
+    
+}
+
+.placeholder{
+    color: green;
+    opacity: 0.5;
+}
+.mat-card-login{
+    background-color:white;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-p{
+    margin-top: 21px;
+    color: #ff1919;
+    font-weight: 500;
+}

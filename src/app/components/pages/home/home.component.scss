@@ -1,0 +1,61 @@
+.logocontainer{
+    margin-top: 1%;
+    display: grid;
+    margin-bottom: 1%;
+    grid-template-columns: 44%;
+    grid-column-gap: 1.5%;
+    grid-row-gap: 15px ;
+    justify-content: center;
+    .logo-card{
+        background-color: white;
+        padding: 8%;
+        border: none;
+        box-shadow: none;
+    }
+}
+.containergrid{
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-column-gap: 1.5%;
+    grid-row-gap: 15px ;
+    justify-content: center;
+.container{
+    margin-top: -3%;
+  
+    justify-content: center;
+    
+    .link{
+        text-decoration: none;
+ 
+    }
+    
+    .post-card{
+        background-color: white;
+        color: black;
+        border-radius: 5.5%;
+        border: 0.3rem solid #7ab97a;
+        text-decoration: none;
+    
+        
+        padding: 8%;
+        font-size: 150%;
+        box-shadow: 1px 3px 6px 0px;
+        
+        .mat-card-header{
+            margin-bottom: 12px;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+        
+        img{
+            height: 200%;
+
+        }
+        p.content{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+}
