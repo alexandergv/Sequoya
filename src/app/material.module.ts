@@ -10,13 +10,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatChipsModule} from '@angular/material/chips';
+
+
 
 import { importExpr } from '@angular/compiler/src/output/output_ast';
 
 
 
 
-const myModule = [MatFormFieldModule, MatCardModule, MatButtonModule, MatMenuModule, MatToolbarModule, MatInputModule, MatIconModule, MatSidenavModule, MatListModule];
+const myModule = [MatFormFieldModule, MatDividerModule, MatProgressSpinnerModule, MatCardModule, MatButtonModule, MatMenuModule, MatToolbarModule, MatInputModule, MatIconModule, MatSidenavModule, MatListModule,MatChipsModule];
 
 
 

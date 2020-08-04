@@ -32,3 +32,14 @@
     display:block;
     margin: 6px auto;
 }
+.container-spinner{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+        
+}
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {   
+    stroke:#0f7403;
+}
+
