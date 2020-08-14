@@ -1,0 +1,86 @@
+
+
+::ng-deep.mat-form-field-ripple {
+      background-color: seagreen !important;;
+     }
+     ::ng-deep.mat-form-field-underline {
+ 
+      background-color: green !important;
+    } 
+  
+table {
+    width: 100%;
+    background-color: white;
+    color: green;
+    text-decoration-color: green;
+    .mat-cell, .mat-footer-cell {
+      color: #000;
+      
+  }
+  mat-row, mat-header-row, mat-footer-row, th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+      border-bottom-color: rgba(0, 0, 0, 0.22);
+  }
+
+  }
+
+  mat-form-field{
+        font-size: 14px;
+        width: 100%;
+  }
+  
+.mat-form-field{
+      background-color: white;
+      color: black;
+      margin:0 auto;
+      display: block;
+      margin-top: 1rem;
+}
+.container-btn-new{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      margin: 1rem -0.6rem;
+      .mat-button, .mat-icon-button, .mat-stroked-button {
+            color:white;
+            background: black;
+        }
+
+}
+.placeholder{
+      color: black;
+      font-weight: 100;
+      display: inline-block;
+      
+}
+.mat-form-field.mat-warn .mat-input-element, .mat-form-field-invalid .mat-input-element {
+      caret-color: white;
+  }
+
+  .mat-paginator{
+        background-color: green;
+        color: white;
+  }
+  ::ng-deep.mat-select-value {
+      color: white;
+  }
+  .mat-header-cell {
+      color: #46a35e;
+  }
+  
+  .mat-header-cell {
+      color: #46a35e;
+  }
+  
+  ::ng-deep.mat-header-cell {
+      color: rgba(8, 101, 12, 0.7);
+  }
+  ::ng-deep.mat-drawer-container {
+      background-color: #ffffff;
+      color: #fff;
+  }
+.filler{
+    background-color:white;
+    height: 600px;
+    width: 1200px;
+    position: fixed;
+}

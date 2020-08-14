@@ -21,7 +21,9 @@
         }
     }
     img{
-        width:80%;
+        margin-top: 50px ;
+        width: 80%;
+        
         border-radius: 6px;
     }
 }
@@ -33,6 +35,7 @@
     margin: 6px auto;
 }
 .container-spinner{
+    margin: 150px;
     display: flex;
     justify-content: center;
     height: 100%;

@@ -1,10 +1,23 @@
 {
+  
   "hosting": {
-    "public": "dist/Sequoya",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+      "public": "dist/Sequoya",
+      "ignore": [
+          "firebase.json",
+          "**/.*",
+          "**/node_modules/**"
+      ],
+      "rewrites": [{
+              "source": "/public/**",
+              "destination": "/public.html"
+          },
+          {
+              "source": "**",
+              "destination": "/index.html"
+          }
+      ],
+      "storage": {
+          "rules": "storage.rules"
+      }
   }
-}
+  }

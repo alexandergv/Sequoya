@@ -17,12 +17,22 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/Auth';
 import { environment } from 'src/environments/environment';
 import {ReactiveFormsModule} from '@angular/forms';
+import { ContainerAppComponent } from './components/pages/container-app/container-app.component';
+import { ModalComponent } from './shared/components/modal/modal.component';
+import { EditPostComponent } from './components/posts/edit-post/edit-post.component';
+import { EditPostModule } from './components/posts/edit-post/edit-post.module';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NewPostComponent,
     PostComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ContainerAppComponent,
+    ModalComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +44,12 @@ import {ReactiveFormsModule} from '@angular/forms';
     AppRoutingModule,
     NewPostModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    EditPostModule
     
+  ],
+  entryComponents: [
+    ModalComponent
   ],
   providers: [
       {provide: BUCKET, useValue:'gs://sequoyahyperion.appspot.com/' }

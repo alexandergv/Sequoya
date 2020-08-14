@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "sequoyahyperion": {
-      "hosting": {
-        "Sequoya": [
-          "sequoyahyperion"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "sequoyahyperion"
   }

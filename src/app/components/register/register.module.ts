@@ -5,6 +5,7 @@ import { MaterialModule} from '../../material.module';
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterComponent } from './register.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { from } from 'rxjs';
 
 
 @NgModule({

@@ -1,0 +1,86 @@
+.profile-card{
+    .guarda{
+        color: red;
+        margin-left: 288px;
+    }
+   background-color: white;
+   height: 600px;
+   
+    .everything{
+        position: relative;
+        border-radius: 50% ;
+        border: 2px solid white;
+     
+        cursor: pointer;
+        .fotochange{
+            display: inline;
+           position: absolute;
+           color: rgba(255,255,255, 0);
+           font-size: 50px;
+           top: 50px;
+           right: 76px;          
+        }
+
+    }
+    :hover.everything{
+        border: 2px solid green;
+        .fotochange{
+            color: rgba(255,255,255, 0.7);
+        }
+        img{
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+            
+        }
+       
+    }
+    img{
+        border-radius: 50%; 
+        display: flex;
+        width: 100%;
+        width: 150px;
+        height: 150px;
+       
+     
+     }
+   
+    .mat-card-header{
+        justify-content: center;
+        
+    }
+    .mat-form-field, button.mat-flat-button{
+        width: 60%;
+        display:block;
+        margin: 0 auto; 
+    }
+    button.mat-flat-button
+    {
+        background: green;
+        padding: 0.4rem;
+    }
+    .mat-dialog-actions{
+        width: 100%;
+        min-height: 150px;  
+        margin-top: 3rem;
+    }
+    mat-card-title, mat-card-content{
+        color: black;
+        
+        justify-content: center;
+    
+    }
+    .placeholder{
+        color: green;
+        opacity: 0.5;
+    }
+    .mat-input-element:disabled, .mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after {
+    color: rgba(0, 0, 0, 0.5); 
+    }
+}
+::ng-deep.mat-form-field-ripple {
+    background-color: seagreen !important;;
+   }
+   ::ng-deep.mat-form-field-underline {
+
+    background-color: green !important;
+  } 

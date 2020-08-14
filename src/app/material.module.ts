@@ -13,15 +13,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatChipsModule} from '@angular/material/chips';
-
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import{ MatDialogModule } from '@angular/material/dialog/';
+import { MatSelectModule} from '@angular/material/select';
 
 
 import { importExpr } from '@angular/compiler/src/output/output_ast';
+import { from } from 'rxjs';
 
 
 
 
-const myModule = [MatFormFieldModule, MatDividerModule, MatProgressSpinnerModule, MatCardModule, MatButtonModule, MatMenuModule, MatToolbarModule, MatInputModule, MatIconModule, MatSidenavModule, MatListModule,MatChipsModule];
+const myModule = [MatFormFieldModule,MatSelectModule,MatDialogModule, MatSortModule, MatDividerModule, MatProgressSpinnerModule, MatCardModule, MatButtonModule, MatMenuModule, MatToolbarModule, MatInputModule, MatIconModule, MatSidenavModule, MatListModule,MatChipsModule,MatPaginatorModule,MatTableModule];
 
 
 

@@ -1,24 +1,24 @@
 <mat-toolbar color="primary">
-    <a routerLink="/" >{{appName}}</a>
-    <span class="fill-remaining-space"></span>
-    
-    <a routerLink="/admin"  routerLinkActive="active"
-    *ngIf="authSvc.userData | async"
-    >
-        <button mat-button> admin</button>
-    </a>
-    <a routerLink="/about"  routerLinkActive="active">
-        <button mat-button>Acerca de</button>
-    </a>
-    <a *ngIf="authSvc.userData | async; else showLogin" (click)="onLogout()" >
-        <button mat-button>Cerrar sesion</button>
-    </a>
-    <ng-template #showLogin>
-    <a routerLink="/login" routerLinkActive="active">
-        <button mat-button>Iniciar Sesion</button>
-    </a>
-    <a routerLink="/register" routerLinkActive="active">
-        <button class="boton"mat-button>Registrarse</button>
-    </a>
-    </ng-template>
+  <a routerLink="/" >{{appName}}</a>
+  <span class="fill-remaining-space"></span>
+  
+  <a routerLink="/admin"  routerLinkActive="active"
+  *ngIf="authSvc.userData | async"
+  >
+      <button mat-button> admin</button>
+  </a>
+  <a routerLink="/about"  routerLinkActive="active">
+      <button mat-button>Acerca de</button>
+  </a>
+  <a *ngIf="authSvc.userData | async; else showLogin" (click)="onLogout()" >
+      <button mat-button>Cerrar sesion</button>
+  </a>
+  <ng-template #showLogin>
+  <a routerLink="/login" routerLinkActive="active">
+      <button mat-button>Iniciar Sesion</button>
+  </a>
+  <a routerLink="/register" routerLinkActive="active">
+      <button class="boton"mat-button>Registrarse</button>
+  </a>
+  </ng-template>
 </mat-toolbar>
