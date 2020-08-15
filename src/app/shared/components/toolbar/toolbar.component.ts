@@ -36,5 +36,8 @@ export class ToolbarComponent implements OnInit {
     this.authSvc.logout();
     
   }
+  onToggleSidenav(){
+    
+  }
 
 }

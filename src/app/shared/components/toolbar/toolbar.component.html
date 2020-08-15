@@ -1,4 +1,9 @@
 <mat-toolbar color="primary">
+    <div FxHide.gt-xs>
+        <button mat-icon-button (onclick)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
   <a routerLink="/" >{{appName}}</a>
   <span class="fill-remaining-space"></span>
   
