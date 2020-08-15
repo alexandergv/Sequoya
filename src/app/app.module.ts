@@ -14,7 +14,7 @@ import {ToolbarComponent} from './shared/components/toolbar/toolbar.component';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireStorageModule, BUCKET} from '@angular/fire/storage';
 import {AngularFireModule} from '@angular/fire';
-import {AngularFireAuthModule} from '@angular/fire/Auth';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ContainerAppComponent } from './components/pages/container-app/container-app.component';

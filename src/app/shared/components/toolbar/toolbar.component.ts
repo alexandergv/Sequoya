@@ -4,6 +4,7 @@ import { PostService } from '../../../components/posts/post.service';
 import {MenuItem} from '../../../shared/models/menuItem.interface';
 
 
+
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',

@@ -1,50 +1,44 @@
-<div class="logocontainer" >
+<div class="logocontainer">
     <mat-card class="logo-card">
-     
-        <img matCardImage [src]="logo.logo">
-    
-        
-        </mat-card>
-    </div>
-<div class="containergrid" *ngIf ="posts$ | async ; else loading">
 
-    <div class="container" *ngFor="let post of posts$ | async" >
-   
-    <mat-card class="post-card" >
-        <a class="link"[routerLink]="['/post',post.id]">
-        <mat-card-header>
-           {{post.titlePost}}
-        </mat-card-header>
-        <img matCardImage [src]="post.imagePost">
-    </a>
-        <mat-card-content>
-            <p class= 'content'>
-                {{post.contentPost}}
-            </p>
-            <a class="link2" [routerLink]="['/post',post.id]">leer más</a>
-           <mat-divider ></mat-divider>
-           <mat-card-actions>
-           <mat-chip-list>
-           <mat-chip *ngFor="let tag of post.tagsPost" [ngClass]= "tag  ">
-                {{ tag }}
-           </mat-chip>
-           </mat-chip-list>
-           </mat-card-actions>
-       
-        </mat-card-content>
-       
-        </mat-card>
-   
+        <img matCardImage [src]="logo.logo">
+
+
+    </mat-card>
+</div>
+<div class="containergrid" *ngIf="posts$ | async ; else loading">
+    <div class="container" *ngFor="let post of posts$ | async">
+        <a class="link" [routerLink]="['/post',post.id]">
+            <mat-card class="post-card">
+                <a class="link" [routerLink]="['/post',post.id]">
+                    <mat-card-header>
+                        {{post.titlePost}}
+                    </mat-card-header>
+                    <img matCardImage [src]="post.imagePost">
+                </a>
+                <mat-card-content>
+                    <p class='content'>
+                        {{post.contentPost}}
+                    </p>
+                    <a class="link2" [routerLink]="['/post',post.id]">leer más</a>
+                    <mat-divider></mat-divider>
+                    <mat-card-actions>
+                        <mat-chip-list>
+                            <mat-chip *ngFor="let tag of post.tagsPost" [ngClass]="tag  ">
+                                {{ tag }}
+                            </mat-chip>
+                        </mat-chip-list>
+                    </mat-card-actions>
+                </mat-card-content>
+            </mat-card>
+        </a>
     </div>
 </div>
 
 
 <ng-template #loading>
     <div class="container-spinner">
-   <mat-spinner class="espiner"></mat-spinner>
-       
-        </div>
-        
-   
+        <mat-spinner class="espiner"></mat-spinner>
+
+    </div>
 </ng-template>
-    
