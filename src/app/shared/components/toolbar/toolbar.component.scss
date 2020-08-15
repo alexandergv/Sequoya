@@ -18,3 +18,15 @@ a{
  
 }
 
+.toolbar-container{
+    width: 100%;
+    display: flex;
+}
+
+mat-sidenav{
+    width: 200px;
+    background-color: seagreen;
+    position:fixed;
+    top: 55px;
+    z-index:1000;
+}

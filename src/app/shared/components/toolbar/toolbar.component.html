@@ -1,29 +1,69 @@
-<mat-toolbar color="primary">
-    <div>
-        <button mat-icon-button (onclick)="onToggleSidenav()">
+<mat-toolbar color="primary" (window:resize)="handleSidenav()">
+    <span *ngIf="showSidebar" (click)="OnClick()">
+        <button mat-button>
             <mat-icon>menu</mat-icon>
         </button>
+    </span>
+    <div *ngIf="!showSidebar" class="toolbar-container">
+        <a routerLink="/">{{appName}}</a>
+        <span class="fill-remaining-space"></span>
+        <a  routerLink="/admin" routerLinkActive="active" *ngIf="authSvc.userData | async">
+            <button mat-button> admin</button>
+        </a>
+        <a routerLink="/about" routerLinkActive="active">
+            <button mat-button>Acerca de</button>
+        </a>
+        <a *ngIf="authSvc.userData | async; else showLogin" (click)="onLogout()">
+            <button mat-button>Cerrar sesion</button>
+        </a>
+        <ng-template #showLogin>
+            <a routerLink="/login" routerLinkActive="active">
+                <button mat-button>Iniciar Sesion</button>
+            </a>
+            <a routerLink="/register" routerLinkActive="active">
+                <button class="boton" mat-button>Registrarse</button>
+            </a>
+        </ng-template>
     </div>
-  <a routerLink="/" >{{appName}}</a>
-  <span class="fill-remaining-space"></span>
-  
-  <a routerLink="/admin"  routerLinkActive="active"
-  *ngIf="authSvc.userData | async"
-  >
-      <button mat-button> admin</button>
-  </a>
-  <a routerLink="/about"  routerLinkActive="active">
-      <button mat-button>Acerca de</button>
-  </a>
-  <a *ngIf="authSvc.userData | async; else showLogin" (click)="onLogout()" >
-      <button mat-button>Cerrar sesion</button>
-  </a>
-  <ng-template #showLogin>
-  <a routerLink="/login" routerLinkActive="active">
-      <button mat-button>Iniciar Sesion</button>
-  </a>
-  <a routerLink="/register" routerLinkActive="active">
-      <button class="boton"mat-button>Registrarse</button>
-  </a>
-  </ng-template>
 </mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sideNav [(opened)]="opened" mode="side">
+        <mat-nav-list>
+            <a routerLink="/">
+                <button mat-button>Sequoya</button>
+            </a>
+        </mat-nav-list>
+        <mat-divider></mat-divider>
+        <mat-nav-list>
+            <a routerLink="/admin" routerLinkActive="active" *ngIf="authSvc.userData | async">
+                <button mat-button> admin</button>
+            </a>
+        </mat-nav-list>
+        <mat-divider></mat-divider>
+        <mat-nav-list>
+            <a routerLink="/about" routerLinkActive="active">
+                <button mat-button>Acerca de</button>
+            </a>
+        </mat-nav-list>
+        <mat-divider></mat-divider>
+        <mat-nav-list>
+            <a *ngIf="authSvc.userData | async; else showLogin" (click)="onLogout()">
+                <button mat-button>Cerrar sesion</button>
+            </a>
+        </mat-nav-list>
+        <mat-divider></mat-divider>
+        <mat-nav-list>
+            <ng-template #showLogin>
+                <a routerLink="/login" routerLinkActive="active">
+                    <button mat-button>Iniciar Sesion</button>
+                </a>
+                <a routerLink="/register" routerLinkActive="active">
+                    <button class="boton" mat-button>Registrarse</button>
+                </a>
+            </ng-template>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+    </mat-sidenav-content>
+</mat-sidenav-container>
